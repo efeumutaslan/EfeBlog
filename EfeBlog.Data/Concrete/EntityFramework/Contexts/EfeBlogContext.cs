@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EfeBlog.Data.Concrete.EntityFramework.Mappings;
 using EfeBlog.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,16 @@ namespace EfeBlog.Data.Concrete.EntityFramework.Contexts
         {
             optionsBuilder.UseSqlServer(connectionString: @"Server=.;Database=EfeBlog;Trusted_Connection=True; MultipleActiveResultSets=True;Connect
             Timeout=30;");
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ArticleMap());
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new CommentMap());
+            modelBuilder.ApplyConfiguration(new RoleMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
         }
     }
 }
