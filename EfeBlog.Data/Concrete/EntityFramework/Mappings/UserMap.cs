@@ -40,6 +40,26 @@ namespace EfeBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(u => u.IsDeleted).IsRequired();
             builder.Property(u => u.Note).HasMaxLength(500);
             builder.ToTable("Users");
+
+            builder.HasData(new User
+            {
+                Id = 1,
+                RoleId = 1,
+                FirstName = "Efe",
+                LastName = "Aslan",
+                UserName = "efeaslan",
+                Email = "efeumutaslan@hotmail.com",
+                IsActive = true,
+                IsDeleted = false,
+                CreatedByName = "InitialCreate",
+                CreatedDate = DateTime.Now,
+                ModifiedByName = "InitialCreate",
+                ModifiedDate = DateTime.Now,
+                Description = "Admin",
+                Note = "Admin User",
+                Picture = "https://meetanentrepreneur.lu/wp-content/uploads/2019/08/profil-linkedin.jpg",
+                PasswordHash = Encoding.ASCII.GetBytes("0192023a7bbd73250516f069df18b500")
+            });
         }
     }
 }

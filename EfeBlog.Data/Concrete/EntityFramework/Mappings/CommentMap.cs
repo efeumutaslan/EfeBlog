@@ -27,6 +27,51 @@ namespace EfeBlog.Data.Concrete.EntityFramework.Mappings
             builder.Property(c => c.IsDeleted).IsRequired();
             builder.Property(c => c.Note).HasMaxLength(500);
             builder.ToTable("Comments");
+
+            builder.HasData(
+                new Comment
+            {
+                    Id = 1,
+                    ArticleId = 1,
+                    Text = "Contrary to popular belief, Lorem Ipsum is not simply random text." +
+                           " It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "C# Comment"
+                },
+                new Comment
+                {
+                    Id = 2,
+                    ArticleId = 2,
+                    Text = "Contrary to popular belief, Lorem Ipsum is not simply random text." +
+                           " It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "C++ Comment"
+                },
+                new Comment
+                {
+                    Id = 3,
+                    ArticleId = 3,
+                    Text = "Contrary to popular belief, Lorem Ipsum is not simply random text." +
+                           " It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreatedByName = "InitialCreate",
+                    CreatedDate = DateTime.Now,
+                    ModifiedByName = "InitialCreate",
+                    ModifiedDate = DateTime.Now,
+                    Note = "Java Comment"
+                }
+                );
         }
     }
 }
