@@ -18,8 +18,7 @@ namespace EfeBlog.Data.Concrete.EntityFramework.Contexts
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connectionString: @"Server=.;Database=EfeBlog;Trusted_Connection=True; MultipleActiveResultSets=True;Connect
-            Timeout=30;");
+            optionsBuilder.UseSqlServer(connectionString: @"Server=.;Database=EfeBlog;Trusted_Connection=True; MultipleActiveResultSets=True;");
 
         }
 
