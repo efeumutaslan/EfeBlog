@@ -5,8 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EfeBlog.Data\EfeBlog.Data.csproj" />
     <ProjectReference Include="..\EfeBlog.Entities\EfeBlog.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AutoMapper\Profiles\" />
   </ItemGroup>
 
 </Project>
