@@ -13,8 +13,4 @@
     <ProjectReference Include="..\EfeBlog.Entities\EfeBlog.Entities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="AutoMapper\Profiles\" />
-  </ItemGroup>
-
 </Project>
