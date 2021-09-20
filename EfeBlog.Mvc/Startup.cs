@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EfeBlog.Services.AutoMapper.Profiles;
 using EfeBlog.Services.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,7 +19,7 @@ namespace EfeBlog.Mvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(typeof(CategoryProfile),typeof(ArticleProfile));
             services.LoadMyServices();
         }
 
